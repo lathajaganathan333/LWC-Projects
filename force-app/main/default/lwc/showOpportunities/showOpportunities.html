@@ -1,0 +1,16 @@
+<template>
+   <lightning-card title={title}>
+      <template if:true={hasOpps}>
+      <template for:each={opps} for:item="opp">
+<lightning-layout key={opps.Id}>
+   <lightning-layout-item>
+      <b>{opp.Name}</b>
+   </lightning-layout-item>
+</lightning-layout>
+</template>
+</template>
+<template if:false={hasOpps}>
+   <div class="slds-align_absolute-center">No Opportunities Found!</div>
+</template>
+   </lightning-card> 
+</template>
